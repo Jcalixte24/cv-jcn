@@ -39,7 +39,7 @@ const CV = () => {
                 <img 
                   src={photoProfile} 
                   alt="Japhet Calixte N'DRI" 
-                  className="w-32 h-32 object-cover rounded"
+                  className="w-32 h-40 object-cover object-top rounded"
                 />
               </div>
               
@@ -252,7 +252,7 @@ const CV = () => {
               <div className="grid grid-cols-2 gap-x-6 gap-y-2 text-sm">
                 <div>
                   <h4 className="font-semibold text-gray-700 mb-1">Langages</h4>
-                  <p>Python, JavaScript, R, Bash, C++, SQL</p>
+                  <p>Python, JavaScript, SQL, HTML, CSS, DAX, Bash</p>
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-700 mb-1">Data Analysis & Visualisation</h4>
@@ -264,7 +264,7 @@ const CV = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-700 mb-1">Bases de Données</h4>
-                  <p>SQL, PostgreSQL, Data Engineering, ETL</p>
+                  <p>SQL, PostgreSQL, Transact SQL, Data Engineering, ETL</p>
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-700 mb-1">Outils & Technologies</h4>
@@ -284,10 +284,10 @@ const CV = () => {
                     <strong>Français</strong> - Natif
                   </p>
                   <p>
-                    <strong>Anglais</strong> - Courant
+                    <strong>Anglais</strong> - Intermédiaire
                   </p>
                   <p>
-                    <strong>Espagnol</strong> - Intermédiaire
+                    <strong>Espagnol</strong> - Débutant
                   </p>
                 </div>
               </div>
