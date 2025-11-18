@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Download, Mail, Phone, MapPin, Github, Linkedin } from "lucide-react";
 import html2pdf from "html2pdf.js";
+import photoProfile from "@/assets/photo_jcn.jpg";
 
 const CV = () => {
   const downloadPDF = () => {
@@ -30,45 +31,60 @@ const CV = () => {
           className="bg-white shadow-lg"
           style={{ width: "210mm", minHeight: "297mm", margin: "0 auto" }}
         >
-          {/* Header */}
-          <div className="bg-primary text-primary-foreground p-8">
-            <h1 className="text-4xl font-bold mb-2">Japhet Calixte N'DRI</h1>
-            <h2 className="text-2xl font-light mb-4">Junior Data Analyst</h2>
-            <div className="flex flex-wrap gap-4 text-sm">
-              <div className="flex items-center gap-2">
-                <Mail className="h-4 w-4" />
-                <a href="mailto:japhetndri15@gmail.com" className="hover:underline">
-                  japhetndri15@gmail.com
-                </a>
+          {/* Header - ATS Friendly */}
+          <div className="bg-primary text-primary-foreground p-6">
+            <div className="flex gap-6 items-start">
+              {/* Photo */}
+              <div className="flex-shrink-0">
+                <img 
+                  src={photoProfile} 
+                  alt="Japhet Calixte N'DRI" 
+                  className="w-32 h-32 object-cover rounded"
+                />
               </div>
-              <div className="flex items-center gap-2">
-                <Phone className="h-4 w-4" />
-                <span>+33 7 45 44 64 04</span>
+              
+              {/* Info */}
+              <div className="flex-1">
+                <h1 className="text-3xl font-bold mb-1">JAPHET CALIXTE N'DRI</h1>
+                <h2 className="text-xl font-normal mb-4">Junior Data Analyst</h2>
+                
+                <div className="space-y-2 text-sm">
+                  <div className="flex items-center gap-2">
+                    <Mail className="h-4 w-4 flex-shrink-0" />
+                    <a href="mailto:japhetndri15@gmail.com" className="hover:underline">
+                      japhetndri15@gmail.com
+                    </a>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Phone className="h-4 w-4 flex-shrink-0" />
+                    <span>+33 7 45 44 64 04</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <MapPin className="h-4 w-4 flex-shrink-0" />
+                    <span>Vitry-sur-Seine, France</span>
+                  </div>
+                  <div className="flex items-center gap-4">
+                    <a
+                      href="https://github.com/Jcalixte24"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-1 hover:underline"
+                    >
+                      <Github className="h-4 w-4" />
+                      <span>GitHub: Jcalixte24</span>
+                    </a>
+                    <a
+                      href="https://www.linkedin.com/in/japhet-calixte-n'dri-0b73832a0"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-1 hover:underline"
+                    >
+                      <Linkedin className="h-4 w-4" />
+                      <span>LinkedIn</span>
+                    </a>
+                  </div>
+                </div>
               </div>
-              <div className="flex items-center gap-2">
-                <MapPin className="h-4 w-4" />
-                <span>Vitry-sur-Seine, France</span>
-              </div>
-            </div>
-            <div className="flex gap-4 mt-3 text-sm">
-              <a
-                href="https://github.com/Jcalixte24"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-1 hover:underline"
-              >
-                <Github className="h-4 w-4" />
-                GitHub
-              </a>
-              <a
-                href="https://www.linkedin.com/in/japhet-calixte-n'dri-0b73832a0"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-1 hover:underline"
-              >
-                <Linkedin className="h-4 w-4" />
-                LinkedIn
-              </a>
             </div>
           </div>
 
