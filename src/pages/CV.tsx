@@ -29,49 +29,56 @@ const CV = () => {
         <div
           id="cv-content"
           className="bg-white shadow-lg"
-          style={{ width: "210mm", minHeight: "297mm", margin: "0 auto" }}
+          style={{ 
+            width: "210mm", 
+            height: "297mm", 
+            margin: "0 auto",
+            overflow: "hidden",
+            fontSize: "11px",
+            lineHeight: "1.4"
+          }}
         >
           {/* Header - ATS Friendly */}
-          <div className="bg-primary text-primary-foreground p-6">
-            <div className="flex gap-6 items-start">
+          <div className="bg-primary text-primary-foreground p-5">
+            <div className="flex gap-5 items-start">
               {/* Photo */}
               <div className="flex-shrink-0">
                 <img 
                   src={photoProfile} 
                   alt="Japhet Calixte N'DRI" 
-                  className="w-32 h-40 object-cover object-top rounded"
+                  className="w-28 h-36 object-cover object-top rounded shadow-md"
                 />
               </div>
               
               {/* Info */}
               <div className="flex-1">
-                <h1 className="text-3xl font-bold mb-1">JAPHET CALIXTE N'DRI</h1>
-                <h2 className="text-xl font-normal mb-4">Junior Data Analyst</h2>
+                <h1 className="text-2xl font-bold mb-0.5 tracking-wide">JAPHET CALIXTE N'DRI</h1>
+                <h2 className="text-base font-normal mb-2.5 opacity-90">Junior Data Analyst</h2>
                 
-                <div className="space-y-2 text-sm">
-                  <div className="flex items-center gap-2">
-                    <Mail className="h-4 w-4 flex-shrink-0" />
+                <div className="grid grid-cols-2 gap-x-4 gap-y-1 text-xs">
+                  <div className="flex items-center gap-1.5">
+                    <Mail className="h-3.5 w-3.5 flex-shrink-0" />
                     <a href="mailto:japhetndri15@gmail.com" className="hover:underline">
                       japhetndri15@gmail.com
                     </a>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <Phone className="h-4 w-4 flex-shrink-0" />
+                  <div className="flex items-center gap-1.5">
+                    <Phone className="h-3.5 w-3.5 flex-shrink-0" />
                     <span>+33 7 45 44 64 04</span>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <MapPin className="h-4 w-4 flex-shrink-0" />
+                  <div className="flex items-center gap-1.5">
+                    <MapPin className="h-3.5 w-3.5 flex-shrink-0" />
                     <span>Vitry-sur-Seine, France</span>
                   </div>
-                  <div className="flex items-center gap-4">
+                  <div className="flex items-center gap-3">
                     <a
                       href="https://github.com/Jcalixte24"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center gap-1 hover:underline"
                     >
-                      <Github className="h-4 w-4" />
-                      <span>GitHub: Jcalixte24</span>
+                      <Github className="h-3.5 w-3.5" />
+                      <span>Jcalixte24</span>
                     </a>
                     <a
                       href="https://www.linkedin.com/in/japhet-calixte-n'dri-0b73832a0"
@@ -79,7 +86,7 @@ const CV = () => {
                       rel="noopener noreferrer"
                       className="flex items-center gap-1 hover:underline"
                     >
-                      <Linkedin className="h-4 w-4" />
+                      <Linkedin className="h-3.5 w-3.5" />
                       <span>LinkedIn</span>
                     </a>
                   </div>
@@ -89,88 +96,76 @@ const CV = () => {
           </div>
 
           {/* Content */}
-          <div className="p-8 space-y-6 text-gray-800">
+          <div className="p-5 space-y-3.5 text-gray-800">
             {/* Profil */}
             <section>
-              <h3 className="text-xl font-bold text-primary border-b-2 border-primary pb-1 mb-3">
+              <h3 className="text-base font-bold text-primary border-b-2 border-primary pb-0.5 mb-1.5">
                 PROFIL
               </h3>
-              <p className="text-sm leading-relaxed">
+              <p className="leading-relaxed">
                 Étudiant en 2ème année au Programme Grande École de l'IA Institut Paris by EPITA,
-                passionné par l'intelligence artificielle et la data science. Originaire de Côte
-                d'Ivoire, je conjugue une expertise technique pointue avec une riche expérience
-                multiculturelle. Mon ambition : devenir un expert reconnu internationalement et
-                contribuer à la transformation numérique de la Côte d'Ivoire et de l'ensemble du
-                continent africain.
+                passionné par l'intelligence artificielle et la data science. Conjuguant expertise technique
+                et expérience multiculturelle, j'aspire à devenir un expert reconnu et contribuer à la
+                transformation numérique de l'Afrique.
               </p>
             </section>
 
             {/* Expériences */}
             <section>
-              <h3 className="text-xl font-bold text-primary border-b-2 border-primary pb-1 mb-3">
+              <h3 className="text-base font-bold text-primary border-b-2 border-primary pb-0.5 mb-1.5">
                 EXPÉRIENCES PROFESSIONNELLES
               </h3>
-              <div className="space-y-4">
+              <div className="space-y-2.5">
                 <div>
-                  <div className="flex justify-between items-start mb-1">
+                  <div className="flex justify-between items-start mb-0.5">
                     <div>
-                      <h4 className="font-bold text-base">Stage Junior Data Analyst</h4>
-                      <p className="text-sm text-gray-700">QuantCube Technology - Paris, France</p>
+                      <h4 className="font-bold text-sm">Stage Junior Data Analyst</h4>
+                      <p className="text-xs text-gray-700">QuantCube Technology - Paris, France</p>
                     </div>
-                    <span className="text-sm text-gray-600">Mai - Juin 2025</span>
+                    <span className="text-xs text-gray-600 whitespace-nowrap">Mai - Juin 2025</span>
                   </div>
-                  <ul className="list-disc list-inside text-sm space-y-1 ml-2">
-                    <li>
-                      Création d'un dashboard de suivi des données de marchés à destination des Data
-                      Analystes et économistes
-                    </li>
-                    <li>Immersion dans la datavisualisation (PowerBI, Excel, SQL)</li>
+                  <ul className="list-disc list-inside space-y-0.5 ml-2 text-xs">
+                    <li>Dashboard de suivi des données de marchés (PowerBI, Excel, SQL)</li>
                     <li>Transformation des besoins métiers en visuels analytiques</li>
                   </ul>
                 </div>
 
                 <div>
-                  <div className="flex justify-between items-start mb-1">
+                  <div className="flex justify-between items-start mb-0.5">
                     <div>
-                      <h4 className="font-bold text-base">Développeur Web Freelance</h4>
-                      <p className="text-sm text-gray-700">Myll Production - Abidjan, Côte d'Ivoire (À distance)</p>
+                      <h4 className="font-bold text-sm">Développeur Web Freelance</h4>
+                      <p className="text-xs text-gray-700">Myll Production - Abidjan (À distance)</p>
                     </div>
-                    <span className="text-sm text-gray-600">Fév. 2023 - Fév. 2025</span>
+                    <span className="text-xs text-gray-600 whitespace-nowrap">Fév. 2023 - Fév. 2025</span>
                   </div>
-                  <ul className="list-disc list-inside text-sm space-y-1 ml-2">
-                    <li>Conception et développement de sites web responsives</li>
-                    <li>Intégration d'outils d'analyse (Google Analytics)</li>
-                    <li>Amélioration des performances web</li>
+                  <ul className="list-disc list-inside space-y-0.5 ml-2 text-xs">
+                    <li>Développement de sites web responsives avec Google Analytics</li>
                   </ul>
                 </div>
 
                 <div>
-                  <div className="flex justify-between items-start mb-1">
+                  <div className="flex justify-between items-start mb-0.5">
                     <div>
-                      <h4 className="font-bold text-base">Membre Actif</h4>
-                      <p className="text-sm text-gray-700">
-                        Association Ivoirienne d'Astronomie (AIA) - Abidjan
-                      </p>
+                      <h4 className="font-bold text-sm">Membre Actif - Association Ivoirienne d'Astronomie</h4>
+                      <p className="text-xs text-gray-700">Abidjan</p>
                     </div>
-                    <span className="text-sm text-gray-600">Jan. 2024 - Sept. 2025</span>
+                    <span className="text-xs text-gray-600 whitespace-nowrap">Jan. 2024 - Sept. 2025</span>
                   </div>
-                  <ul className="list-disc list-inside text-sm space-y-1 ml-2">
-                    <li>Participation active à des projets de recherche panafricains sur Astronometrica</li>
-                    <li>Certifié par The International Astronomical Search Collaboration (IASC)</li>
+                  <ul className="list-disc list-inside space-y-0.5 ml-2 text-xs">
+                    <li>Projets de recherche panafricains, certifié IASC</li>
                   </ul>
                 </div>
 
                 <div>
-                  <div className="flex justify-between items-start mb-1">
+                  <div className="flex justify-between items-start mb-0.5">
                     <div>
-                      <h4 className="font-bold text-base">Participant</h4>
-                      <p className="text-sm text-gray-700">Happy Coders Academy - Abidjan</p>
+                      <h4 className="font-bold text-sm">Participant - Happy Coders Academy</h4>
+                      <p className="text-xs text-gray-700">Abidjan</p>
                     </div>
-                    <span className="text-sm text-gray-600">Juillet 2022</span>
+                    <span className="text-xs text-gray-600 whitespace-nowrap">Juillet 2022</span>
                   </div>
-                  <ul className="list-disc list-inside text-sm space-y-1 ml-2">
-                    <li>Conception d'un prototype de voiture autonome via Arduino</li>
-                    <li>Programmation en C++ pour systèmes embarqués</li>
+                  <ul className="list-disc list-inside space-y-0.5 ml-2 text-xs">
+                    <li>Prototype de voiture autonome Arduino (C++)</li>
                   </ul>
                 </div>
               </div>
@@ -178,34 +173,31 @@ const CV = () => {
 
             {/* Formation */}
             <section>
-              <h3 className="text-xl font-bold text-primary border-b-2 border-primary pb-1 mb-3">
+              <h3 className="text-base font-bold text-primary border-b-2 border-primary pb-0.5 mb-1.5">
                 FORMATION
               </h3>
-              <div className="space-y-3">
+              <div className="space-y-2">
                 <div>
-                  <div className="flex justify-between items-start mb-1">
+                  <div className="flex justify-between items-start mb-0.5">
                     <div>
-                      <h4 className="font-bold text-base">Programme Grande École - IA & Data Science</h4>
-                      <p className="text-sm text-gray-700">IA Institut Paris by EPITA & ISG - Kremlin-Bicêtre</p>
+                      <h4 className="font-bold text-sm">Programme Grande École - IA & Data Science</h4>
+                      <p className="text-xs text-gray-700">IA Institut Paris by EPITA & ISG</p>
                     </div>
-                    <span className="text-sm text-gray-600">En cours</span>
+                    <span className="text-xs text-gray-600 whitespace-nowrap">En cours</span>
                   </div>
-                  <p className="text-sm">
-                    Formation d'excellence en intelligence artificielle, data science et data engineering.
-                    Data Science, éthique, programmation avancée, mathématiques et économie.
+                  <p className="text-xs">
+                    IA, Data Science, Data Engineering, programmation avancée, mathématiques et économie.
                   </p>
                 </div>
 
                 <div>
                   <div className="flex justify-between items-start">
                     <div>
-                      <h4 className="font-bold text-base">Baccalauréat Général Français - Mention Bien</h4>
-                      <p className="text-sm text-gray-700">
-                        Lycée International Jules Verne - Abidjan, Côte d'Ivoire
-                      </p>
-                      <p className="text-sm italic">Spécialités : Mathématiques et NSI</p>
+                      <h4 className="font-bold text-sm">Baccalauréat Général Français - Mention Bien</h4>
+                      <p className="text-xs text-gray-700">Lycée International Jules Verne - Abidjan</p>
+                      <p className="text-xs italic">Spécialités : Mathématiques et NSI</p>
                     </div>
-                    <span className="text-sm text-gray-600">2024</span>
+                    <span className="text-xs text-gray-600 whitespace-nowrap">2024</span>
                   </div>
                 </div>
               </div>
@@ -213,94 +205,78 @@ const CV = () => {
 
             {/* Certifications */}
             <section>
-              <h3 className="text-xl font-bold text-primary border-b-2 border-primary pb-1 mb-3">
+              <h3 className="text-base font-bold text-primary border-b-2 border-primary pb-0.5 mb-1.5">
                 CERTIFICATIONS
               </h3>
-              <div className="space-y-2 text-sm">
-                <div className="flex justify-between">
-                  <span>
-                    <strong>Google Advanced Data Analytics Certificate</strong> (9 modules) - Google via Coursera
-                  </span>
-                  <span className="text-gray-600">2025</span>
+              <div className="space-y-1 text-xs">
+                <div className="flex justify-between items-start">
+                  <span><strong>Google Advanced Data Analytics Certificate</strong> - Coursera</span>
+                  <span className="text-gray-600 whitespace-nowrap ml-2">2025</span>
                 </div>
-                <div className="flex justify-between">
-                  <span>
-                    <strong>Google Data Analytics Professional Certificate</strong> (8 modules) - Google via Coursera
-                  </span>
-                  <span className="text-gray-600">2025</span>
+                <div className="flex justify-between items-start">
+                  <span><strong>Google Data Analytics Professional Certificate</strong> - Coursera</span>
+                  <span className="text-gray-600 whitespace-nowrap ml-2">2025</span>
                 </div>
-                <div className="flex justify-between">
-                  <span>
-                    <strong>Learning AI Through Visualization</strong> (6 modules) - Columbia+
-                  </span>
-                  <span className="text-gray-600">2025</span>
+                <div className="flex justify-between items-start">
+                  <span><strong>Learning AI Through Visualization</strong> - Columbia+</span>
+                  <span className="text-gray-600 whitespace-nowrap ml-2">2025</span>
                 </div>
-                <div className="flex justify-between">
-                  <span>
-                    <strong>Formation en Art Oratoire</strong> - AUDECA GROUP
-                  </span>
-                  <span className="text-gray-600">2023</span>
+                <div className="flex justify-between items-start">
+                  <span><strong>Formation en Art Oratoire</strong> - AUDECA GROUP</span>
+                  <span className="text-gray-600 whitespace-nowrap ml-2">2023</span>
                 </div>
               </div>
             </section>
 
             {/* Compétences */}
             <section>
-              <h3 className="text-xl font-bold text-primary border-b-2 border-primary pb-1 mb-3">
+              <h3 className="text-base font-bold text-primary border-b-2 border-primary pb-0.5 mb-1.5">
                 COMPÉTENCES TECHNIQUES
               </h3>
-              <div className="grid grid-cols-2 gap-x-6 gap-y-2 text-sm">
+              <div className="grid grid-cols-2 gap-x-4 gap-y-1.5 text-xs">
                 <div>
-                  <h4 className="font-semibold text-gray-700 mb-1">Langages</h4>
+                  <h4 className="font-semibold text-gray-700 mb-0.5">Langages</h4>
                   <p>Python, JavaScript, SQL, HTML, CSS, DAX, Bash</p>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-700 mb-1">Data Analysis & Visualisation</h4>
-                  <p>PowerBI, Tableau, Excel, Pandas, NumPy, Matplotlib, Seaborn</p>
+                  <h4 className="font-semibold text-gray-700 mb-0.5">Data Analysis & Visualisation</h4>
+                  <p>PowerBI, Tableau, Excel, Pandas, NumPy, Matplotlib</p>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-700 mb-1">Machine Learning & IA</h4>
+                  <h4 className="font-semibold text-gray-700 mb-0.5">Machine Learning & IA</h4>
                   <p>Scikit-learn, TensorFlow, Modélisation Prédictive</p>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-700 mb-1">Bases de Données</h4>
-                  <p>SQL, PostgreSQL, Transact SQL, Data Engineering, ETL</p>
+                  <h4 className="font-semibold text-gray-700 mb-0.5">Bases de Données</h4>
+                  <p>SQL, PostgreSQL, Transact SQL, ETL</p>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-700 mb-1">Outils & Technologies</h4>
-                  <p>Git, GitHub, Arduino, IoT, Linux</p>
+                  <h4 className="font-semibold text-gray-700 mb-0.5">Outils</h4>
+                  <p>Git, GitHub, Arduino, Linux</p>
                 </div>
               </div>
             </section>
 
-            {/* Langues et Soft Skills */}
-            <section className="grid grid-cols-2 gap-6">
+            {/* Langues et Centres d'intérêt */}
+            <section className="grid grid-cols-2 gap-4">
               <div>
-                <h3 className="text-xl font-bold text-primary border-b-2 border-primary pb-1 mb-3">
+                <h3 className="text-base font-bold text-primary border-b-2 border-primary pb-0.5 mb-1.5">
                   LANGUES
                 </h3>
-                <div className="space-y-1 text-sm">
-                  <p>
-                    <strong>Français</strong> - Natif
-                  </p>
-                  <p>
-                    <strong>Anglais</strong> - Intermédiaire
-                  </p>
-                  <p>
-                    <strong>Espagnol</strong> - Débutant
-                  </p>
+                <div className="space-y-0.5 text-xs">
+                  <p><strong>Français</strong> - Natif</p>
+                  <p><strong>Anglais</strong> - Intermédiaire</p>
+                  <p><strong>Espagnol</strong> - Débutant</p>
                 </div>
               </div>
               <div>
-                <h3 className="text-xl font-bold text-primary border-b-2 border-primary pb-1 mb-3">
+                <h3 className="text-base font-bold text-primary border-b-2 border-primary pb-0.5 mb-1.5">
                   CENTRES D'INTÉRÊT
                 </h3>
-                <div className="space-y-1 text-sm">
-                  <p>Basketball et sports d'équipe</p>
-                  <p>Baby-foot</p>
+                <div className="space-y-0.5 text-xs">
+                  <p>Basketball • Baby-foot</p>
                   <p>Art oratoire et débat</p>
-                  <p>Astronomie</p>
-                  <p>Projets créatifs alliant technologie et art</p>
+                  <p>Astronomie • Projets tech créatifs</p>
                 </div>
               </div>
             </section>
